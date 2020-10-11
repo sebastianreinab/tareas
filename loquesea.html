@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+</head>
+<body>
+    <a-scene>
+        <a-camera position="0 5 10" >  </a-camera>    
+
+        <a-sphere src="cosas\texturas\textcielo.png" position="0 5 -5" translate="90">
+            <a-entity rotation= "0 0 0" animation="property: rotation; to:0 360 0; loop: true; dur:5000">
+                <a-sphere src="cosas/imagenes/texturahierba.png" position="0 5 5" >
+                </a-sphere>
+            </a-entity>
+        </a-sphere>
+
+        
+        
+        <a-plane rotation="-90 0 0" position =" 0 0.1 0" width="500" height="500" repeat="5"src="cosas\texturas\texturahierba.png"></a-plane>
+
+        <a-assets>
+            <img id="algo" src="imagenes/7019365171_15ed586ca7_o.jpg">
+        </a-assets>
+        
+        <a-sky src="#algo">
+        </a-sky>
+
+        <a-entity light="type: directional ;
+                          color: red"
+                          position="20 1 1">
+        </a-entity>
+        <a-entity light="type: directional ;
+                          color: yellow"
+                          position="-20 1 1">
+        </a-entity>                  
+
+    </a-scene>
+    
+</body>
+</html>
